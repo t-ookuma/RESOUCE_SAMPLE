@@ -1,20 +1,19 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header"></div>
-                <div class="card-body">
-                    <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">NAME</label>
-                        <div class="col-md-6">
-                            <input id="name" type="text" class="form-control is-invalid" name="name" value="{{ old('name') }}" readonly>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- get => [index(), create(), show()] -->
+<!-- post => store() -->
+
+<!-- UsersController -> update() -->
+<form action="/users" method="post">
+    @csrf
+    @method('PUT')
+    <!-- 省略 -->
+    <input type="submit" value="">
+</form>
+
+<!-- UsersController -> delete() -->
+<form action="/users" method="post">
+    @csrf
+    @method('DELETE')
+    <!-- 省略 -->
+    <input type="submit" value="">
+</form>

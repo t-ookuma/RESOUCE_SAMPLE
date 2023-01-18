@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/**
+ * リソースコントローラー用ルーティング
+ * ルート確認コマンド：php artisan route:list
+ * 
+ * 使用しないルートは下記でonly指定(第三引数)
+ * Route::resource('/users', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
+ * 
+ * 使用しないルートは下記でexcept指定(第三引数) ※基本はonly使用
+ * Route::resource('/users', 'UsersController', ['except' => ['show', 'update']]);
+ */
+Route::resource('/users', 'UsersController');
