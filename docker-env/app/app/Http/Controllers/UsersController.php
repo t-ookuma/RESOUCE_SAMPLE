@@ -12,10 +12,7 @@ class UsersController extends Controller
      * 認証のかけ方
      * 
      * only指定(第三引数)
-     * $this->middleware('auth', ['only' => ['index', 'create', 'show', 'edit']]);
-     * 
-     * except指定(第三引数) ※基本はonly使用
-     * $this->middleware('auth', ['except' => ['store', 'update', 'destroy']]);
+     * $this->middleware('auth', ['only' => ['store', 'update', 'destroy']]);
      */
     public function __construct()
     {
