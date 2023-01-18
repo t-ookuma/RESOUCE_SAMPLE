@@ -11,7 +11,7 @@ class UsersController extends Controller
     /**
      * 認証のかけ方
      * 
-     * only指定(第三引数)
+     * only指定
      * $this->middleware('auth', ['only' => ['store', 'update', 'destroy']]);
      */
     public function __construct()
