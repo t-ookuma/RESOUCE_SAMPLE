@@ -1,0 +1,1 @@
+# RESOUCE_SAMPLE
